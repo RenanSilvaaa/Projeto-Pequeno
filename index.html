@@ -7,59 +7,59 @@
     <title>Site da facul</title>
     <link rel="stylesheet" href="Acessos/style.css">
     <style>
-        /* Reset Básico */
+        
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Garante que padding e border não adicionem ao tamanho total */
+    box-sizing: border-box; 
 }
 
 html {
-    font-size: 16px; /* Base para unidades rem */
+    font-size: 16px; 
 }
 
 /* Container Geral */
 .container {
-    max-width: 1200px; /* Largura máxima para o conteúdo */
-    margin: 0 auto; /* Centraliza o container na página */
-    padding: 0 1.5rem; /* Padding horizontal para evitar que o conteúdo grude nas bordas */
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 1.5rem; 
 }
 
 /* Navegação */
 .main-nav {
     background-color: rgba(254, 254, 254, 0.99);
     padding: 1rem 0;
-    position: relative; /* Para posicionar a imagem da everbyte */
+    position: relative; 
 }
 
 .nav-container {
     display: flex;
-    justify-content: space-between; /* Espaça os itens da navegação */
+    justify-content: space-between; 
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
-    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+    flex-wrap: wrap; 
 }
 
 .main-nav ul {
     display: flex;
     list-style-type: none;
     flex-wrap: wrap;
-    justify-content: center; /* Centraliza itens em telas menores */
-    margin-top: 10px; /* Espaço entre o logo e o menu em telas menores */
+    justify-content: center; 
+    margin-top: 10px; 
 }
 
 .main-nav ul li {
-    margin: 0 0.5rem; /* Espaçamento entre os itens do menu */
+    margin: 0 0.5rem; 
 }
 
 .main-nav a {
     color: rgb(130, 123, 123);
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 0.625rem 1.25rem; /* 10px 20px */
-    display: block; /* Para que o padding funcione na área clicável */
+    padding: 0.625rem 1.25rem; 
+    display: block; 
 }
 
 .main-nav li a:hover {
@@ -67,9 +67,9 @@ html {
 }
 
 .everbyte {
-    height: 2.5rem; /* 40px */
+    height: 2.5rem; 
     position: absolute;
-    left: 1.5rem; /* Alinha à esquerda dentro do nav-container */
+    left: 1.5rem; 
     top: 50%;
     transform: translateY(-50%);
 }
@@ -79,9 +79,9 @@ html {
 }
 
 .logodobrasil {
-    height: 0.9375rem; /* 15px */
-    vertical-align: middle; /* Alinha a imagem com o texto */
-    margin-left: 0.3rem; /* Espaçamento entre o texto e a bandeira */
+    height: 0.9375rem; 
+    vertical-align: middle; 
+    margin-left: 0.3rem; 
 }
 
 .language-selector {
@@ -92,27 +92,27 @@ html {
 /* Seção Hero */
 .hero-section {
     text-align: center;
-    padding-top: 10rem; /* Ajuste o padding superior conforme necessário */
+    padding-top: 10rem; 
     padding-bottom: 2rem;
 }
 
 .titulo {
-    height: auto; /* Mantém a proporção */
-    max-width: 90%; /* Garante que não exceda a largura da tela */
-    width: 30rem; /* Tamanho base da imagem */
+    height: auto; 
+    max-width: 90%; 
+    width: 30rem; 
     margin-bottom: 1rem;
 }
 
 .texto {
     color: gray;
-    font-size: 1.5rem; /* 24px */
+    font-size: 1.5rem; 
     margin-bottom: 1.5rem;
 }
 
 .app-buttons {
     display: flex;
     justify-content: center;
-    gap: 1rem; /* Espaço entre os botões */
+    gap: 1rem; 
     flex-wrap: wrap;
 }
 
@@ -120,16 +120,16 @@ html {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.625rem 1.5rem; /* 10px 24px */
+    padding: 0.625rem 1.5rem; 
     background-color: rgb(78, 76, 76);
     color: rgb(238, 235, 235);
     text-decoration: none;
-    font-size: 1.875rem; /* 30px */
-    border-radius: 5px; /* Adiciona um pouco de arredondamento */
-    min-width: 10rem; /* Largura mínima para os botões */
+    font-size: 1.875rem; 
+    border-radius: 5px; 
+    min-width: 10rem; 
 }
 
-/* Seção de Newsletter */
+
 .newsletter-section {
     background-color: #c36565;
     padding: 2rem 0;
@@ -137,65 +137,64 @@ html {
 }
 
 .newsletter-section h2 {
-    background-color: transparent; /* Remove o background do h2 */
+    background-color: transparent; 
     display: flex;
-    flex-direction: column; /* Organiza itens em coluna */
+    flex-direction: column; 
     align-items: center;
-    gap: 1rem; /* Espaço entre os inputs/botão */
+    gap: 1rem; 
 }
 
 .email, .language-input {
-    padding: 0.625rem 1rem; /* 10px 16px */
-    width: 80%; /* Ocupa 80% da largura do container */
-    max-width: 400px; /* Limita a largura máxima */
+    padding: 0.625rem 1rem; 
+    width: 80%; 
+    max-width: 400px; 
     border: 1px solid white;
     background-color: white;
     color: gray;
 }
 
 .inscrever {
-    padding: 0.625rem 2rem; /* 10px 32px */
+    padding: 0.625rem 2rem; 
     background-color: #c36565;
     border: 2px solid white;
     font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
     color: white;
-    font-size: 1.25rem; /* 20px */
+    font-size: 1.25rem; 
 }
 
 .descricao {
     margin-top: 1rem;
     color: aliceblue;
-    font-size: 1.5rem; /* 24px */
-    line-height: 1.3; /* Espaçamento entre as linhas */
+    font-size: 1.5rem; 
+    line-height: 1.3; 
 }
 
-/* Seção da História (p0) */
 .story-section {
     background-color: rgb(78, 76, 76);
     padding: 4rem 0;
-    text-align: center; /* Centraliza o texto */
+    text-align: center; 
 }
 
 .story-section .container {
-    max-width: 900px; /* Limita a largura do texto para melhor leitura */
+    max-width: 900px; 
     margin: 0 auto;
 }
 
 .p1 {
-    font-size: 2.1875rem; /* 35px */
+    font-size: 2.1875rem; 
     color: rgb(138, 151, 163);
     margin-bottom: 1.5rem;
 }
 
 .p2 {
-    font-size: 3.125rem; /* 50px */
+    font-size: 3.125rem; 
     color: aliceblue;
     margin-bottom: 1.5rem;
 }
 
 .p3, .p4 {
-    font-size: 1.5rem; /* 24px */
+    font-size: 1.5rem; 
     color: rgba(157, 158, 147, 0.941);
     line-height: 1.6;
     margin-bottom: 1.5rem;
@@ -210,12 +209,12 @@ html {
 }
 
 .gp, .ap {
-    height: 4rem; /* 64px */
+    height: 4rem; 
     width: auto;
-    max-width: 100%; /* Garante que não exceda o container */
+    max-width: 100%; 
 }
 
-/* Seção de Citação (forest1) */
+
 .quote-section {
     background-color: rgba(9, 25, 61, 0.717);
     padding: 4rem 1.5rem;
@@ -229,11 +228,11 @@ html {
 }
 
 .text2 {
-    font-size: 1.5625rem; /* 25px */
+    font-size: 1.5625rem; 
     color: white;
 }
 
-/* Rodapé (forest2) */
+
 .footer {
     background-color: rgb(5, 4, 4);
     padding: 4rem 0;
@@ -255,13 +254,13 @@ html {
 }
 
 .GoogleP, .AppS {
-    height: 4rem; /* 64px */
+    height: 4rem; 
     width: auto;
     max-width: 100%;
 }
 
 .text4 {
-    font-size: 2.5rem; /* 40px */
+    font-size: 2.5rem; 
     color: white;
     margin-bottom: 2rem;
 }
@@ -274,21 +273,20 @@ html {
 }
 
 .FB, .X, .instagram {
-    height: 5.625rem; /* 90px */
+    height: 5.625rem; 
     width: auto;
     max-width: 100%;
 }
 
-/* --- Media Queries --- */
 
-/* Telas menores que 768px (tablets e mobiles) */
+
 @media (max-width: 768px) {
     html {
-        font-size: 14px; /* Diminui a fonte base para telas menores */
+        font-size: 14px; 
     }
 
     .nav-container {
-        flex-direction: column; /* Empilha logo e menu */
+        flex-direction: column; 
         align-items: center;
     }
 
@@ -296,81 +294,80 @@ html {
         margin-left: 0;
         padding: 0;
         margin-top: 1rem;
-        flex-direction: column; /* Itens do menu empilhados */
+        flex-direction: column; 
         align-items: center;
     }
 
     .main-nav ul li {
-        margin: 0.5rem 0; /* Espaçamento vertical entre os itens do menu */
+        margin: 0.5rem 0; 
     }
 
     .everbyte {
-        position: static; /* Remove o posicionamento fixo */
+        position: static; 
         transform: none;
-        margin-bottom: 1rem; /* Espaço abaixo do logo */
+        margin-bottom: 1rem; 
     }
 
     .titulo {
-        width: 100%; /* Ocupa toda a largura disponível */
-        max-width: 25rem; /* Limite para não ficar gigante */
+        width: 100%; 
+        max-width: 25rem; 
     }
 
     .texto {
-        font-size: 1.2rem; /* 19.2px */
-        padding: 0 1rem; /* Ajusta padding para telas menores */
+        font-size: 1.2rem; 
+        padding: 0 1rem; 
     }
 
     .app-buttons,
     .store-buttons,
     .download-links,
     .social-links {
-        flex-direction: column; /* Empilha os botões/links */
+        flex-direction: column; 
         align-items: center;
         gap: 1rem;
     }
 
     .email, .language-input {
-        width: 90%; /* Aumenta a largura dos inputs em telas menores */
+        width: 90%; 
     }
 
     .descricao {
-        font-size: 1.2rem; /* 19.2px */
+        font-size: 1.2rem; 
         padding: 0 1rem;
     }
 
     .p1 {
-        font-size: 1.8rem; /* 28.8px */
+        font-size: 1.8rem; 
     }
 
     .p2 {
-        font-size: 2.5rem; /* 40px */
+        font-size: 2.5rem; 
     }
 
     .p3, .p4 {
-        font-size: 1.1rem; /* 17.6px */
+        font-size: 1.1rem; 
         padding: 0 1rem;
     }
 
     .text3 {
-        font-size: 4rem; /* 64px */
+        font-size: 4rem; 
     }
 
     .text4 {
-        font-size: 2rem; /* 32px */
+        font-size: 2rem; 
     }
 
     .GoogleP, .AppS, .gp, .ap {
-        height: 3.5rem; /* Diminui o tamanho dos botões */
+        height: 3.5rem; 
     }
 
     .FB, .X, .instagram {
-        height: 4.5rem; /* Diminui o tamanho dos ícones sociais */
+        height: 4.5rem; 
     }
 }
-/* Telas muito pequenas (mobiles) */
 @media (max-width: 480px) {
     html {
-        font-size: 12px; /* Diminui ainda mais a fonte base */
+        font-size: 12px; 
     }
 
     .main-nav a {
@@ -378,32 +375,32 @@ html {
     }
 
     .android, .IOS {
-        font-size: 1.5rem; /* 24px */
+        font-size: 1.5rem; 
         padding: 0.5rem 1rem;
     }
 
     .descricao {
-        font-size: 1rem; /* 16px */
+        font-size: 1rem; 
     }
 
     .p1 {
-        font-size: 1.5rem; /* 24px */
+        font-size: 1.5rem;
     }
 
     .p2 {
-        font-size: 2rem; /* 32px */
+        font-size: 2rem; 
     }
 
     .p3, .p4 {
-        font-size: 0.9rem; /* 14.4px */
+        font-size: 0.9rem; 
     }
 
     .text3 {
-        font-size: 3rem; /* 48px */
+        font-size: 3rem; 
     }
 
     .text4 {
-        font-size: 1.5rem; /* 24px */
+        font-size: 1.5rem; 
     }
 }
     </style>
