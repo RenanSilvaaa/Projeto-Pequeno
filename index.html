@@ -1,280 +1,499 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Site da facul</title>
-  <link rel="stylesheet" href="Acessos/style.css" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site da facul</title>
+    <link rel="stylesheet" href="Acessos/style.css">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px; 
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 1.5rem; 
+}
+
+
+.main-nav {
+    background-color: rgba(254, 254, 254, 0.99);
+    padding: 1rem 0;
+    position: relative; 
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    flex-wrap: wrap; 
+}
+
+.main-nav ul {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: center; 
+    margin-top: 10px; 
+}
+
+.main-nav ul li {
+    margin: 0 0.5rem; 
+}
+
+.main-nav a {
+    color: rgb(130, 123, 123);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.625rem 1.25rem; 
+    display: block; 
+}
+
+.main-nav li a:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.everbyte {
+    height: 2.5rem; 
+    position: absolute;
+    left: 1.5rem; 
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.duskwood {
+    color: #2EA3F2;
+}
+
+.logodobrasil {
+    height: 0.9375rem; 
+    vertical-align: middle; 
+    margin-left: 0.3rem; 
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+}
+
+/* Seção Hero */
+.hero-section {
+    text-align: center;
+    padding-top: 10rem; 
+    padding-bottom: 2rem;
+}
+
+.titulo {
+    height: auto; 
+    max-width: 90%; 
+    width: 30rem; 
+    margin-bottom: 1rem;
+}
+
+.texto {
+    color: gray;
+    font-size: 1.5rem; /* 24px */
+    margin-bottom: 1.5rem;
+}
+
+.app-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; 
+    flex-wrap: wrap;
+}
+
+.android, .IOS {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem 1.5rem; 
+    background-color: rgb(78, 76, 76);
+    color: rgb(238, 235, 235);
+    text-decoration: none;
+    font-size: 1.875rem; 
+    border-radius: 5px; 
+    min-width: 10rem; 
+}
+
+.newsletter-section {
+    background-color: #c36565;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.newsletter-section h2 {
+    background-color: transparent; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 1rem; 
+}
+
+.email, .language-input {
+    padding: 0.625rem 1rem; 
+    width: 80%; 
+    max-width: 400px; 
+    border: 1px solid white;
+    background-color: white;
+    color: gray;
+}
+
+.inscrever {
+    padding: 0.625rem 2rem; 
+    background-color: #c36565;
+    border: 2px solid white;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: white;
+    font-size: 20px; /* 20px */
+}
+
+.descricao {
+    margin-top: 1rem;
+    color: aliceblue;
+    font-size: 1.5rem; /* 24px */
+    line-height: 1.3; /* Espaçamento entre as linhas */
+}
+
+/* Seção da História (p0) */
+.story-section {
+    background-color: rgb(78, 76, 76);
+    padding: 4rem 0;
+    text-align: center; /* Centraliza o texto */
+}
+
+.story-section .container {
+    max-width: 900px; /* Limita a largura do texto para melhor leitura */
+    margin: 0 auto;
+}
+
+.p1 {
+    font-size: 2.1875rem; /* 35px */
+    color: rgb(138, 151, 163);
+    margin-bottom: 1.5rem;
+}
+
+.p2 {
+    font-size: 3.125rem; /* 50px */
+    color: aliceblue;
+    margin-bottom: 1.5rem;
+}
+
+.p3, .p4 {
+    font-size: 1.5rem; /* 24px */
+    color: rgba(157, 158, 147, 0.941);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.store-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.gp, .ap {
+    height: 4rem; /* 64px */
+    width: auto;
+    max-width: 100%; /* Garante que não exceda o container */
+}
+
+/* Seção de Citação (forest1) */
+.quote-section {
+    background-color: rgba(9, 25, 61, 0.717);
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+.text1 {
+    font-size: 1.25rem; /* 20px */
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.text2 {
+    font-size: 1.5625rem; /* 25px */
+    color: white;
+}
+
+/* Rodapé (forest2) */
+.footer {
+    background-color: rgb(5, 4, 4);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.text3 {
+    font-size: 5.625rem; /* 90px */
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.download-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.GoogleP, .AppS {
+    height: 4rem; /* 64px */
+    width: auto;
+    max-width: 100%;
+}
+
+.text4 {
+    font-size: 2.5rem; /* 40px */
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.FB, .X, .instagram {
+    height: 5.625rem; /* 90px */
+    width: auto;
+    max-width: 100%;
+}
+
+/* --- Media Queries --- */
+
+/* Telas menores que 768px (tablets e mobiles) */
+@media (max-width: 768px) {
+    html {
+        font-size: 14px; /* Diminui a fonte base para telas menores */
     }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
+    .nav-container {
+        flex-direction: column; /* Empilha logo e menu */
+        align-items: center;
     }
 
-    nav {
-      background-color: rgba(254, 254, 254, 0.99);
-      padding: 10px 0;
+    .main-nav ul {
+        margin-left: 0;
+        padding: 0;
+        margin-top: 1rem;
+        flex-direction: column; /* Itens do menu empilhados */
+        align-items: center;
     }
 
-    nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      list-style: none;
-      gap: 10px;
-      padding: 10px;
+    .main-nav ul li {
+        margin: 0.5rem 0; /* Espaçamento vertical entre os itens do menu */
     }
 
-    nav a {
-      color: rgb(130, 123, 123);
-      text-decoration: none;
-      padding: 10px 15px;
-    }
-
-    nav li a:hover {
-      background: rgba(0, 0, 0, 0.4);
-    }
-
-    .everbyte,
-    .titulo,
-    .logodobrasil {
-      height: 40px;
-      margin: 5px;
-    }
-
-    .logodobrasil {
-      height: 15px;
+    .everbyte {
+        position: static; /* Remove o posicionamento fixo */
+        transform: none;
+        margin-bottom: 1rem; /* Espaço abaixo do logo */
     }
 
     .titulo {
-      height: auto;
-      max-height: 200px;
-      padding-top: 50px;
+        width: 100%; /* Ocupa toda a largura disponível */
+        max-width: 25rem; /* Limite para não ficar gigante */
     }
 
     .texto {
-      text-align: center;
-      color: gray;
-      margin: 20px auto;
+        font-size: 1.2rem; /* 19.2px */
+        padding: 0 1rem; /* Ajusta padding para telas menores */
     }
 
-    .android,
-    .IOS {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background-color: rgb(78, 76, 76);
-      color: white;
-      font-size: 20px;
-      text-decoration: none;
-      text-align: center;
+    .app-buttons,
+    .store-buttons,
+    .download-links,
+    .social-links {
+        flex-direction: column; /* Empilha os botões/links */
+        align-items: center;
+        gap: 1rem;
     }
 
-    .android:hover,
-    .IOS:hover {
-      opacity: 0.9;
-    }
-
-    .email,
-    .language,
-    .inscrever {
-      display: block;
-      width: 80%;
-      max-width: 400px;
-      margin: 10px auto;
-      padding: 10px;
-    }
-
-    .inscrever {
-      background-color: #c36565;
-      color: white;
-      border: 2px solid white;
-      text-align: center;
+    .email, .language-input {
+        width: 90%; /* Aumenta a largura dos inputs em telas menores */
     }
 
     .descricao {
-      color: aliceblue;
-      font-size: 20px;
-      text-align: center;
-      margin: 20px auto;
+        font-size: 1.2rem; /* 19.2px */
+        padding: 0 1rem;
     }
 
-    .p0 {
-      background-color: rgb(78, 76, 76);
-      color: white;
-      padding: 20px;
-      text-align: center;
+    .p1 {
+        font-size: 1.8rem; /* 28.8px */
     }
 
-    .p1,
-    .p2,
-    .p3,
-    .p4 {
-      margin: 10px 0;
-      font-size: 18px;
+    .p2 {
+        font-size: 2.5rem; /* 40px */
     }
 
-    .gp,
-    .ap {
-      height: 50px;
-      margin: 10px;
-    }
-
-    .forest1 {
-      background-color: rgba(9, 25, 61, 0.717);
-      padding: 20px;
-      text-align: center;
-    }
-
-    .text1,
-    .text2 {
-      color: white;
-      margin: 10px 0;
-    }
-
-    .text2 {
-      font-size: 22px;
-    }
-
-    .forest2 {
-      background-color: rgb(5, 4, 4);
-      text-align: center;
-      padding: 20px;
+    .p3, .p4 {
+        font-size: 1.1rem; /* 17.6px */
+        padding: 0 1rem;
     }
 
     .text3 {
-      font-size: 40px;
-      color: white;
-      margin: 20px 0;
-    }
-
-    .GoogleP,
-    .AppS,
-    .FB,
-    .X,
-    .instagram {
-      height: 60px;
-      margin: 10px;
+        font-size: 4rem; /* 64px */
     }
 
     .text4 {
-      font-size: 30px;
-      color: white;
-      margin-top: 30px;
+        font-size: 2rem; /* 32px */
     }
 
-    /* Responsividade */
-    @media (max-width: 768px) {
-      .titulo {
-        padding-top: 100px;
-        max-width: 90%;
-        margin: 0 auto;
-      }
-
-      .descricao,
-      .text3,
-      .text4 {
-        font-size: 18px;
-      }
-
-      .p1,
-      .p2,
-      .p3,
-      .p4 {
-        padding: 0 10px;
-        font-size: 16px;
-      }
-
-      .email,
-      .language,
-      .inscrever {
-        width: 90%;
-      }
-
-      nav ul {
-        flex-direction: column;
-        gap: 5px;
-      }
+    .GoogleP, .AppS, .gp, .ap {
+        height: 3.5rem; /* Diminui o tamanho dos botões */
     }
 
-    @media (max-width: 480px) {
-      .text3 {
-        font-size: 28px;
-      }
-
-      .text4 {
-        font-size: 22px;
-      }
-
-      .gp,
-      .ap,
-      .GoogleP,
-      .AppS {
-        height: 40px;
-      }
+    .FB, .X, .instagram {
+        height: 4.5rem; /* Diminui o tamanho dos ícones sociais */
     }
-  </style>
+}
+
+/* Telas muito pequenas (mobiles) */
+@media (max-width: 480px) {
+    html {
+        font-size: 12px; /* Diminui ainda mais a fonte base */
+    }
+
+    .main-nav a {
+        padding: 0.5rem 1rem;
+    }
+
+    .android, .IOS {
+        font-size: 1.5rem; /* 24px */
+        padding: 0.5rem 1rem;
+    }
+
+    .descricao {
+        font-size: 1rem; /* 16px */
+    }
+
+    .p1 {
+        font-size: 1.5rem; /* 24px */
+    }
+
+    .p2 {
+        font-size: 2rem; /* 32px */
+    }
+
+    .p3, .p4 {
+        font-size: 0.9rem; /* 14.4px */
+    }
+
+    .text3 {
+        font-size: 3rem; /* 48px */
+    }
+
+    .text4 {
+        font-size: 1.5rem; /* 24px */
+    }
+}
+    </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="#">HOME</a></li>
-      <li><a href="#">MOONVALE</a></li>
-      <li><a href="#" class="duskwood">DUSKWOOD</a></li>
-      <li><a href="#">Contato</a></li>
-      <li><a href="#">Português</a></li>
-      <img src="imagens/logodobrasil.png" class="logodobrasil" />
-      <img src="imagens/everbyte.png" class="everbyte" />
-      <img src="imagens/DuskwoodTitle_03.png" class="titulo" />
-    </ul>
-  </nav>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <img src="imagens/everbyte.png" alt="Everbyte Logo" class="everbyte"> 
+            <ul>
+                <li><a href="#" class="home">HOME</a></li>
+                <li><a href="#" class="moonvale">MOONVALE</a></li>    
+                <li><a href="#" class="duskwood">DUSKWOOD</a></li> 
+                <li><a href="#" class="contato">Contato</a></li> 
+                <li class="language-selector">
+                    <a href="#" class="portugues">Português</a>
+                    <img src="imagens/logodobrasil.png" alt="Bandeira do Brasil" class="logodobrasil">
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-  <h1 class="texto">SUSPENSE INTERATIVO PARA ANDROID E IOS</h1>
-  <div style="text-align: center;">
-    <a class="android" href="https://play.google.com/store/apps/details?id=com.everbytestudio.interactive.text.chat.story.rpg.cyoa.duskwood" target="_blank">Android</a>
-    <a class="IOS" href="https://apps.apple.com/us/app/duskwood-detective-story/id1479430106" target="_blank">iOS</a>
-  </div>
+    <header class="hero-section">
+        <div class="container">
+            <img src="imagens/DuskwoodTitle_03.png" alt="Duskwood Title" class="titulo">
+            <h1 class="texto">SUSPENSE INTERATIVO PARA ANDROID E IOS</h1>
+            <div class="app-buttons">
+                <a class="android" href="https://play.google.com/store/apps/details?id=com.everbytestudio.interactive.text.chat.story.rpg.cyoa.duskwood" target="_blank">Android</a>
+                <a class="IOS" href="https://apps.apple.com/us/app/duskwood-detective-story/id1479430106" target="_blank">iOS</a>
+            </div>
+        </div>
+    </header>
 
-  <div>
-    <h2>
-      <input class="email" type="email" placeholder="E-mail" />
-      <input class="language" type="text" placeholder="Language" />
-      <a href="#" class="inscrever">Inscrever</a>
-      <p class="descricao">
-        Inscreva-se para receber uma notificação por e-mail quando o próximo episódio estiver disponível!
-      </p>
-    </h2>
-  </div>
+    <section class="newsletter-section">
+        <div class="container">
+            <h2>
+                <input class="email" type="email" placeholder="E-mail">
+                <input class="language-input" type="text" placeholder="Language"> 
+                <a href="#" class="inscrever">Inscrever</a>
+                <p class="descricao">Inscreva-se para receber uma notificação por e-mail quando o próximo <br> episódio estiver disponível!</p>
+            </h2>
+        </div>
+    </section>
 
-  <div class="p0">
-    <p class="p1">Hannah está desaparecida há 72 horas.</p>
-    <p class="p2">VOCÊ CONSEGUE ENCONTRÁ-LA?</p>
-    <p class="p3">
-      Já se passaram 72 horas desde que Hannah desapareceu sem deixar rastros. Seus amigos recebem uma mensagem do telefone da pessoa desaparecida. A mensagem contém apenas um número... seu número!
-    </p>
-    <p class="p4">
-      Duskwood é uma vila cercada por floresta. Estranhos relatam sensações estranhas. Agora, todos estão preocupados. Junte-se aos moradores para encontrar Hannah. As lendas ganham vida... conseguirá salvá-la?
-    </p>
-    <a href="https://play.google.com/store/apps/details?id=com.everbytestudio.interactive.text.chat.story.rpg.cyoa.duskwood" target="_blank">
-      <img src="imagens/gp.png" class="gp" />
-    </a>
-    <a href="https://apps.apple.com/us/app/duskwood-detective-story/id1479430106" target="_blank">
-      <img src="imagens/appstore.jpeg" class="ap" />
-    </a>
-  </div>
+    <section class="story-section p0">
+        <div class="container">
+            <p class="p1">Hannah está desaparecida há 72 horas.</p>
+            <p class="p2">VOCÊ CONSEGUE ENCONTRÁ-LA?</p>
+            <p class="p3">Já se passaram 72 horas desde que Hannah desapareceu sem deixar rastros. Do nada seus amigos recebem uma mensagem do telefone da pessoa desaparecida. A mensagem misteriosa contém apenas um número... seu número!</p>
+            <p class="p4">Duskwood é uma pequena e sonolenta vila cercada por uma densa floresta. Raramente estranhos se perdem nesta área remota e, quando o fazem, sempre descrevem a área como estranha ou até assustadora. Os habitantes de Duskwood nunca se preocuparam com isso. Mas, desde 72 horas, muitas coisas mudaram e mesmo entre eles há cada vez mais preocupações... Junte-se a um grupo de Duskwood e ajude-os a encontrar sua amiga Hannah. As velhas lendas assustadoras da floresta parecem ganhar vida – você conseguirá encontrar Hannah antes que seja tarde demais?</p>
+            <div class="store-buttons">
+                <a href="https://play.google.com/store/apps/details?id=com.everbytestudio.interactive.text.chat.story.rpg.cyoa.duskwood" target="_blank">
+                    <img src="imagens/gp.png" alt="Google Play" class="gp">
+                </a> 
+                <a href="https://apps.apple.com/us/app/duskwood-detective-story/id1479430106" target="_blank">
+                    <img src="imagens/appstore.jpeg" alt="App Store" class="ap">
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <div class="forest1">
-    <p class="text1">Estou super empolgado com esse jogo e mal posso esperar pela próxima parte!</p>
-    <p class="text2">EU VOU TE SALVAR, HANNAH!</p>
-  </div>
+    <section class="quote-section forest1">
+        <div class="container">
+            <p class="text1">Estou super empolgado com esse jogo e mal posso esperar pela próxima parte! Os personagens são autênticos e parecem muito reais.</p>
+            <p class="text2">EU VOU TE SALVAR, HANNAH!</p>
+        </div>
+    </section>
 
-  <div class="forest2">
-    <p class="text3">Jogue Agora!</p>
-    <a href="https://play.google.com/store/apps/details?id=com.everbytestudio.interactive.text.chat.story.rpg.cyoa.duskwood" target="_blank">
+    <footer class="footer forest2">
+        <div class="container">
+            <p class="text3">Jogue Agora!</p>
+            <div class="download-links">
+                <a href="https://play.google.com/store/apps/details?id=com.everbytestudio.interactive.text.chat.story.rpg.cyoa.duskwood" target="_blank">
+                    <img src="imagens/googleplay.png" alt="Google Play" class="GoogleP">
+                </a> 
+                <a href="https://apps.apple.com/us/app/duskwood-detective-story/id1479430106" target="_blank">
+                    <img src="imagens/playstore.jpeg" alt="App Store" class="AppS">
+                </a>
+            </div>
+            <p class="text4">NOS SIGA!</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/PlayDuskwood" target="_blank">
+                   <img src="imagens/FB.jpeg" alt="Facebook" class="FB"> 
+                </a>
+                <a href="https://twitter.com/EverbyteStudio" target="_blank"> 
+                    <img src="imagens/X.png" alt="Twitter" class="X">
+                </a>
+                <a href="https://www.instagram.com/everbytestudio/" target="_blank">
+                    <img src="imagens/insta.png" alt="Instagram" class="instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
